@@ -40,5 +40,11 @@ export class CRUD {
             throw new Error("This element not exists");
     }
 
-    
+    create(data) {
+        this.#data.push(data);
+        this.#save();
+        return this.#data.length;
+    }
+
+   
 }
